@@ -180,7 +180,7 @@ def main():
                 statsQuotes['quotesCollisions'] += collision02
                 quote_end_time = time.time()
 
-    print(hashTable_movieTitle)    # for testing
+    #print(hashTable_movieTitle)    # for testing
 
     # FINAL STATISTICS CALCULATION
     statsTitles['titleEmptySpace'] = size - statsTitles['titleInsertions']
