@@ -43,3 +43,6 @@ Method 4: Chaining
 
 	Title 'None' values: 11,244
 
+
+Method 5: Double Hashing
+	Double hashing is supposed to take the Unicode value from a string, create a hash value from it, then if a collision occurs the original hash value is hashed a second time with another equation to find the next available slot. This second hash equation is used over and over again until an empty index is found within the table. This is supposed to create more unique hash indexes and cut down on the amount of clustering within a table. Unfortunately, the table hits a max insertion around 14885 and will not insert anymore values because it thinks the table is full, despite the table sizes being set to 15007. As of now, this method results in the 2nd fastest method, but I believe this is more because the table 'fills' and the time stops, not because the table is filled to completion. I will need to figure out why this filling is happening early.
