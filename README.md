@@ -21,3 +21,12 @@ Method 2: Optimized Division Hashing w/ Quadratic Probing
   Title & Quote: 'None' values same amount as method 1. The last run I tried resulted in 3700 'None' values appearing in the Title table for method 1, I think other checks produced slightly less, but not by enough to prove that a solution was found or that those versions simply ran better before changes were made.
 	
   Construction Time: 0.0874 seconds
+
+
+Method 3: Multiplication Hashing w/ Quadratic Probing 
+	I chose this combination of methods as my next attempt because quadratic probing resulted in less collisions than linear probing did. The multiplication method also seems to be less sensitive to the overall size of the table than the other hashing method. This method seems to work better when the table size is a power of two. So I changed the table size and this decreased the initial run time from 0.2837 to 0.0927 seconds (Hard to say if some of this was cut down because of running the code twice and things being stored in local memory, but it felt like enough of a difference to justify the extra empty space). Unfortunately this did result in even more 'None' values being found (3822 to be exact) in the final table, even though there should only be approximately 129 (which is successfully tracked in the statistics) because of the additional table size. I did not double check the amount of 'None' values in the quotes table, but I assume there are more than in the previous methods.
+
+	Title Approximate Collisions: 40,184
+	Quote Approximate Collisions: 100,673
+
+	Construction Time: 0.0855 seconds
